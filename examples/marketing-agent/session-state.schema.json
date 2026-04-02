@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MarketingAgentSessionState",
+  "type": "object",
+  "properties": {
+    "campaign_id": {
+      "type": "string"
+    },
+    "drafts": {
+      "type": "array"
+    },
+    "approval_state": {
+      "type": "string"
+    },
+    "analytics_snapshots": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "campaign_id",
+    "drafts",
+    "approval_state"
+  ]
+}

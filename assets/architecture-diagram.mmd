@@ -1,0 +1,10 @@
+flowchart TD
+    UserGoal[UserGoal] --> ContextBuilder[ContextBuilder]
+    ContextBuilder --> ModelTurn[ModelTurn]
+    ModelTurn --> ToolDecision{ToolRequested}
+    ToolDecision -->|No| FinalResponse[FinalResponse]
+    ToolDecision -->|Yes| PolicyCheck[PolicyCheck]
+    PolicyCheck --> ToolExecutor[ToolExecutor]
+    ToolExecutor --> SessionState[SessionState]
+    SessionState --> Observability[Observability]
+    Observability --> ModelTurn

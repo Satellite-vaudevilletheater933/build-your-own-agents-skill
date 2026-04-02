@@ -1,0 +1,18 @@
+{
+  "tools": [
+    {
+      "name": "get_trending_topics",
+      "purpose": "Fetch recent high-signal topics for a target audience and channel.",
+      "permission": "auto-allow",
+      "timeout_seconds": 15,
+      "retry_policy": "bounded_backoff"
+    },
+    {
+      "name": "publish_post",
+      "purpose": "Publish an approved post to a social channel.",
+      "permission": "ask-first",
+      "timeout_seconds": 20,
+      "retry_policy": "idempotent_only"
+    }
+  ]
+}
