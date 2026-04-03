@@ -5,6 +5,31 @@
       "purpose": "Fetch recent high-signal topics for a target audience and channel.",
       "permission": "auto-allow",
       "timeout_seconds": 15,
+      "side_effects": "none",
+      "retry_policy": "bounded_backoff"
+    },
+    {
+      "name": "get_campaign_brief",
+      "purpose": "Retrieve the campaign brief for the current campaign ID.",
+      "permission": "auto-allow",
+      "timeout_seconds": 10,
+      "side_effects": "none",
+      "retry_policy": "bounded_backoff"
+    },
+    {
+      "name": "get_brand_guide",
+      "purpose": "Retrieve the brand voice guide with tone rules and style constraints.",
+      "permission": "auto-allow",
+      "timeout_seconds": 10,
+      "side_effects": "none",
+      "retry_policy": "bounded_backoff"
+    },
+    {
+      "name": "draft_post",
+      "purpose": "Generate a draft social media post. Does not publish.",
+      "permission": "auto-allow",
+      "timeout_seconds": 30,
+      "side_effects": "none",
       "retry_policy": "bounded_backoff"
     },
     {
@@ -12,7 +37,16 @@
       "purpose": "Publish an approved post to a social channel.",
       "permission": "ask-first",
       "timeout_seconds": 20,
+      "side_effects": "publishes content to external platform",
       "retry_policy": "idempotent_only"
+    },
+    {
+      "name": "fetch_post_metrics",
+      "purpose": "Fetch engagement metrics for a published post.",
+      "permission": "auto-allow",
+      "timeout_seconds": 15,
+      "side_effects": "none",
+      "retry_policy": "bounded_backoff"
     }
   ]
 }

@@ -1,4 +1,4 @@
-# Claude-Style Agent Architecture Guide
+# Production Agent Architecture Guide
 
 This guide is a reusable handoff for building loop-based, tool-using agents inspired by strong patterns seen in modern coding agents.
 

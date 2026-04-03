@@ -1,4 +1,4 @@
-# Claude-Style Agent Architecture Reference
+# Production Agent Architecture Reference
 
 ## Reusable Pattern
 1. user gives a goal

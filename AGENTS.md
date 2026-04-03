@@ -4,8 +4,9 @@
 This repo is designed so an AI coding agent can read a small set of files and immediately produce a serious, production-oriented agent design.
 
 ## Canonical Entry Points
-- Skill: [`skills/claude-style-agent-architecture/SKILL.md`](skills/claude-style-agent-architecture/SKILL.md)
-- Reference: [`skills/claude-style-agent-architecture/reference.md`](skills/claude-style-agent-architecture/reference.md)
+- Skill: [`skills/production-agent-architecture/SKILL.md`](skills/production-agent-architecture/SKILL.md)
+- Reference: [`skills/production-agent-architecture/reference.md`](skills/production-agent-architecture/reference.md)
+- Scaffolder: [`skills/agent-scaffolder/SKILL.md`](skills/agent-scaffolder/SKILL.md)
 - Example: [`examples/marketing-agent/agent-build-spec.md`](examples/marketing-agent/agent-build-spec.md)
 - Human quickstart: [`docs/getting-started.md`](docs/getting-started.md)
 
@@ -30,7 +31,7 @@ If you use this repo to design an agent, output all of the following:
 - Keep v1 narrow and testable.
 
 ## Recommended Read Order
-1. [`skills/claude-style-agent-architecture/SKILL.md`](skills/claude-style-agent-architecture/SKILL.md)
-2. [`skills/claude-style-agent-architecture/reference.md`](skills/claude-style-agent-architecture/reference.md)
+1. [`skills/production-agent-architecture/SKILL.md`](skills/production-agent-architecture/SKILL.md)
+2. [`skills/production-agent-architecture/reference.md`](skills/production-agent-architecture/reference.md)
 3. [`examples/marketing-agent/agent-build-spec.md`](examples/marketing-agent/agent-build-spec.md)
 4. production docs under [`docs/`](docs/)

@@ -1,8 +1,8 @@
 ---
-name: claude-style-agent-architecture
-description: Design production-ready AI agents using a Claude-style loop architecture with explicit tools, context, memory, permissions, observability, evaluation, and rollout planning.
+name: production-agent-architecture
+description: Design production-ready AI agents using a loop-based architecture with explicit tools, context, memory, permissions, observability, evaluation, and rollout planning.
 ---
-# Claude-Style Agent Architecture
+# Production Agent Architecture
 
 ## When To Use This Skill
 Use this skill when the task is to:

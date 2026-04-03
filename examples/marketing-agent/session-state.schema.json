@@ -1,22 +1,58 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "MarketingAgentSessionState",
+  "description": "Simplified schema showing the key fields. See src/state.py for the full dataclass.",
   "type": "object",
   "properties": {
+    "session_id": {
+      "type": "string",
+      "description": "Auto-generated unique session identifier"
+    },
     "campaign_id": {
       "type": "string"
     },
+    "objective": {
+      "type": "string",
+      "description": "The user goal for this session"
+    },
     "drafts": {
-      "type": "array"
+      "type": "array",
+      "description": "Draft posts generated during the session"
     },
     "approval_state": {
-      "type": "string"
+      "type": "string",
+      "enum": ["pending", "approved", "denied"]
+    },
+    "published_posts": {
+      "type": "array",
+      "description": "Posts successfully published"
     },
     "analytics_snapshots": {
-      "type": "array"
+      "type": "array",
+      "description": "Engagement metrics collected after publishing"
+    },
+    "turn_count": {
+      "type": "integer"
+    },
+    "retry_budget": {
+      "type": "integer",
+      "default": 3
+    },
+    "total_input_tokens": {
+      "type": "integer"
+    },
+    "total_output_tokens": {
+      "type": "integer"
+    },
+    "completed": {
+      "type": "boolean"
+    },
+    "failure_reason": {
+      "type": ["string", "null"]
     }
   },
   "required": [
+    "session_id",
     "campaign_id",
     "drafts",
     "approval_state"
